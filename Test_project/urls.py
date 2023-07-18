@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from demo_route_get_post import getTime
+from demo_base_view import MyView
 #/home/vinhcn/myProject/Test_project/view.py
 
 #? tao route method get va post
 #1 tao class
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('demoroute/', getTime), 
+    path('demoroute/', getTime),
+    path("mine/", MyView.as_view(), name="my-view"),
+
 ]

@@ -5,6 +5,10 @@ from django.shortcuts import render
 
 from forms import NameForm
 
+#tao class route thong qua view cua django
+#goi ham get tra so tuoi x 2
+#them param vao method get or post va verify
+
 
 def getTime(request):
     # if this is a POST request we need to process the form data

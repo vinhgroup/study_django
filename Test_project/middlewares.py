@@ -1,3 +1,6 @@
+from django.http import Http404
+
+
 class DemoMiddleware:
 
     def __init__(self, get_response):
@@ -8,8 +11,17 @@ class DemoMiddleware:
         # Code to be executed for each request before
         # the view (and later middleware) are called.
 
+        # BT: lay thong tin trong request ra
+        
         response = self.get_response(request)
-        print("custom middleware to do something here")
+
+        age = request.headers['age']
+        print(age)
+        if int(age) < 5:
+            raise Http404
+        else:
+            print("xxxxxxxxxxxx")
+   
         # Code to be executed for each request/response after
         # the view is called.
 
