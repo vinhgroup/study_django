@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     # media, duong dan
     'django.contrib.staticfiles',
+    'products'
 ]
 
 # tuong lua
@@ -59,7 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'Test_project.middlewares.DemoMiddleware'
+    'Test_project.DemoMiddleware.DemoMiddleware'
 ]
 
 # domain chinh
@@ -150,3 +151,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#tao router o trong product voi method post
+#xu ly data o view nhan payload va xu ly de luu vao products
